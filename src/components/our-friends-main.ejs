@@ -1,0 +1,41 @@
+<% const data = JSON.parse(include('../data/pets-temp.json')) %>
+
+<section class="our-friends-main" id="our-friends">
+  <div class="wrapper">
+    <h3 class="our-friends-main__title">Our friends who are&nbsp;looking for a house</h3>
+    <div class="our-friends-main__slider">
+      <div class="our-friends-main__arrow-left">
+        <svg
+          width="14"
+          height="6"
+          viewBox="0 0 14 6"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929" />
+        </svg>
+      </div>
+      <div class="our-friends-main__slide-wraper">
+        <div class="our-friends-main__slide-list">
+          <% data.pets_main.forEach((pet) => { %>
+          <!--  -->
+          <%- include('pet-card.ejs', {pet}) %>
+          <!--  -->
+          <% }) %>
+        </div>
+      </div>
+      <div class="our-friends-main__arrow-right">
+        <svg
+          width="14"
+          height="6"
+          viewBox="0 0 14 6"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 4V2L11 2V0L14 3L11 6V4L0 4Z" fill="#292929" />
+        </svg>
+      </div>
+    </div>
+    <a href="pets" class="our-friends-main__button">Get to know the rest</a>
+  </div>
+</section>

@@ -1,0 +1,228 @@
+@use '../styles/mixins' as m;
+@use '../styles/variables' as v;
+
+.header {
+  margin-bottom: 60px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__navigation .logo {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 443px;
+  }
+
+  &__list a {
+    position: relative;
+    text-decoration: none;
+    color: v.$color_dark_s;
+
+    &:hover {
+      color: v.$color_light_s;
+    }
+  }
+
+  &__list ._active {
+    color: v.$color_light_s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: v.$color_primary;
+    }
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &__overlay {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgba(41, 41, 41, 0.6);
+    opacity: 0;
+    cursor: url('@public/assets/images/icons/modal-close-button-hover.svg') 26
+        26,
+      auto;
+    transition: 0.3s opacity;
+
+    &._active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @include m.media_sm {
+    &__burger {
+      position: relative;
+      z-index: 30;
+      display: block;
+      width: 30px;
+      height: 22px;
+      margin-right: 43px;
+      cursor: pointer;
+      transition: 0.3s transform;
+
+      i {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2px;
+        background-color: v.$color_primary;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 2px;
+        background-color: v.$color_primary;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: v.$color_primary;
+      }
+
+      &._active {
+        position: fixed;
+        right: 10px;
+        transform: rotate(0.25turn);
+      }
+    }
+
+    &__navigation {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      z-index: 20;
+      display: flex;
+      flex-direction: column;
+      max-width: 320px;
+      width: 100%;
+      padding: 30px 10px;
+      background-color: v.$color_dark_3xl;
+      transition: 0.3s transform;
+
+      &._active {
+        transform: translateX(-100%);
+      }
+    }
+
+    &__navigation .logo {
+      display: block;
+      margin-bottom: 158px;
+      align-self: flex-start;
+    }
+
+    &__list {
+      flex-direction: column;
+      min-width: auto;
+    }
+
+    &__list a {
+      @include m.paragraph-mobile-menu;
+      margin-bottom: 42px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.logo {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 0;
+
+  &__title {
+    @include m.logo_title;
+    color: v.$color_primary;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    @include m.logo_subtitle;
+    color: v.$color_light_xl;
+  }
+}
+
+.header_white-sticky {
+  position: sticky;
+  top: 0;
+  padding: 30px 0;
+  margin-bottom: 0;
+  background-color: v.$color-light-xl;
+
+  .header__list a {
+    color: v.$color_dark_l;
+
+    &:hover {
+      color: v.$color_dark_3xl;
+    }
+  }
+
+  .header__list ._active {
+    color: v.$color_dark_3xl;
+  }
+
+  @include m.media_sm {
+    .header__burger {
+      i {
+        background-color: #000;
+      }
+
+      &::after {
+        background-color: #000;
+      }
+
+      &::before {
+        background-color: #000;
+      }
+    }
+
+    .header__navigation {
+      background-color: v.$color-light-s;
+    }
+  }
+
+  .logo {
+    &__title {
+      color: v.$color_dark_l;
+    }
+
+    &__description {
+      color: v.$color_dark_3xl;
+    }
+  }
+}

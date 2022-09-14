@@ -1,0 +1,50 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+body {
+  @include m.paragraph_l;
+  color: v.$color_dark_xl;
+  min-width: 320px;
+
+  &._active {
+    overflow: hidden;
+  }
+}
+
+h2 {
+  @include m.h2;
+}
+
+h3 {
+  @include m.h3;
+  color: v.$color_dark_l;
+}
+
+h4 {
+  @include m.h4;
+}
+
+h5 {
+  @include m.h5;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+
+  @include m.media_md {
+    padding: 0 30px;
+  }
+
+  @include m.media_sm {
+    padding: 0 10px;
+  }
+}

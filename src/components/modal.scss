@@ -1,0 +1,169 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as m;
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(41, 41, 41, 0.6);
+  cursor: url(@public/assets/images/icons/modal-close-button-hover.svg) 26 26,
+    auto;
+}
+
+.modal {
+  width: 100%;
+  padding: 0 55px;
+  max-width: 1010px;
+
+  &__card {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 9px;
+    background-color: v.$color_light_s;
+    cursor: auto;
+
+    @include m.media_md {
+      max-width: 630px;
+    }
+
+    @include m.media_sm {
+      max-width: 240px;
+    }
+  }
+
+  &__close-button {
+    position: absolute;
+    bottom: 100%;
+    left: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border: 2px solid v.$color_primary;
+    border-radius: 100px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: v.$color_primary_light;
+      border: 2px solid v.$color_primary_light;
+    }
+
+    @include m.media_sm {
+      left: calc(100% - 22px);
+    }
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      border-radius: 9px;
+      width: 500px;
+    }
+
+    @include m.media_md {
+      img {
+        width: 350px;
+      }
+    }
+
+    @include m.media_sm {
+      display: none;
+    }
+  }
+
+  &__description {
+    width: 100%;
+    max-width: 400px;
+    padding: 50px 20px 50px 29px;
+
+    @include m.media_md {
+      max-width: 282px;
+      padding: 10px 9px 10px 11px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    @include m.h4;
+    margin-bottom: 40px;
+
+    @include m.media_md {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    @include m.h5;
+    margin-bottom: 40px;
+
+    @include m.media_md {
+      font-size: 13px;
+      line-height: 14px;
+      margin-bottom: 20px;
+    }
+
+    @include m.media_sm {
+      text-align: justify;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list {
+    @include m.h5;
+
+    li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 14px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 4px;
+        background-color: v.$color_primary;
+      }
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    @include m.media_md {
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    @include m.media_sm {
+      li {
+        text-align: left;
+      }
+    }
+  }
+
+  @include m.media_sm {
+    text-align: center;
+    padding: 0 10px;
+  }
+}

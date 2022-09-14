@@ -1,0 +1,40 @@
+<header class="<%= whiteSticky ? 'header header_white-sticky' : 'header' %>" >
+  <div class="wrapper">
+    <div class="header__row">
+      <a
+        href="<%= whiteSticky ? '../' : 'javascript: void(0);' %>"
+        class="logo"
+      >
+        <h1 class="logo__title">Cozy House</h1>
+        <span class="logo__description">Shelter for pets in Boston</span>
+      </a>
+      <div class="header__burger" id="burger"><i></i></div>
+      <div class="header__overlay" id="headerOverlay"></div>
+      <nav class="header__navigation" id="navigation">
+        <div class="logo">
+          <h3 class="logo__title">Cozy House</h3>
+          <span class="logo__description">Shelter for pets in Boston</span>
+        </div>
+        <div class="header__list">
+          <a
+            href="<%= whiteSticky ? '../' : 'javascript: void(0);' %>"
+            class="<%= whiteSticky ? '' : '_active' %>"
+            <%= whiteSticky ? '' : 'data-smooth-id=main'  %>
+            >About the shelter</a
+          >
+          <a
+            href="<%= whiteSticky ? 'javascript: void(0);' : 'pets' %>"
+            class="<%= whiteSticky ? '_active' : '' %>"
+            <%= whiteSticky ? 'data-smooth-id=main' : ''  %>
+            >Our pets</a
+          >
+          <a href="<%= whiteSticky ? '../#help' : '#help' %>" 
+            <%= whiteSticky ? '' : 'data-smooth-id=help' %>
+            >Help the shelter</a
+          >
+          <a href="#footer" data-smooth-id="footer">Contacts</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,42 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as m;
+
+.pet-card {
+  width: 100%;
+  min-height: 435px;
+  max-width: 270px;
+  border-radius: 9px;
+  text-align: center;
+  background-color: v.$color_light_s;
+  transition: 0.3s background-color;
+
+  &:hover {
+    cursor: pointer;
+
+    .pet-card__text {
+      background-color: v.$color_light_xl;
+    }
+
+    .pet-card__button {
+      border: 2px solid v.$color_primary_light;
+      background-color: v.$color_primary_light;
+    }
+  }
+
+  &__text {
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition: 0.3s background-color;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    @include m.button_secondary;
+    transition: 0.3s background-color, 0.3s border;
+  }
+}

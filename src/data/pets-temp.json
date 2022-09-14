@@ -1,0 +1,77 @@
+{
+  "pets_main": [
+    {
+      "id": 55,
+      "name": "Katrine",
+      "src": "~@public/assets/images/pets/pets-katrine.png"
+    },
+    {
+      "id": 11,
+      "name": "Jennifer",
+      "src": "~@public/assets/images/pets/pets-jennifer.png"
+    },
+    {
+      "id": 33,
+      "name": "Woody",
+      "src": "~@public/assets/images/pets/pets-woody.png"
+    },
+    {
+      "name": "Sophia",
+      "src": "~@public/assets/images/pets/pets-sophia.png"
+    },
+    {
+      "name": "Timmy",
+      "src": "~@public/assets/images/pets/pets-timmy.png"
+    },
+    {
+      "name": "Charly",
+      "src": "~@public/assets/images/pets/pets-charly.png"
+    },
+    {
+      "name": "Scarlett",
+      "src": "~@public/assets/images/pets/pets-scarlett.png"
+    },
+    {
+      "name": "Freddie",
+      "src": "~@public/assets/images/pets/pets-freddie.png"
+    },
+    {
+      "name": "Freddie",
+      "src": "~@public/assets/images/pets/pets-freddie.png"
+    }
+  ],
+  "pets_all": [
+    {
+      "name": "Katrine",
+      "src": "~@public/assets/images/pets/pets-katrine.png"
+    },
+    {
+      "name": "Jennifer",
+      "src": "~@public/assets/images/pets/pets-jennifer.png"
+    },
+    {
+      "name": "Woody",
+      "src": "~@public/assets/images/pets/pets-woody.png"
+    },
+    {
+      "name": "Sophia",
+      "src": "~@public/assets/images/pets/pets-sophia.png"
+    },
+    {
+      "name": "Timmy",
+      "src": "~@public/assets/images/pets/pets-timmy.png"
+    },
+    {
+      "name": "Charly",
+      "src": "~@public/assets/images/pets/pets-charly.png"
+    },
+    {
+      "name": "Scarlett",
+      "src": "~@public/assets/images/pets/pets-scarlett.png"
+    },
+    {
+      "name": "Freddie",
+      "src": "~@public/assets/images/pets/pets-freddie.png"
+    }
+  ]
+}

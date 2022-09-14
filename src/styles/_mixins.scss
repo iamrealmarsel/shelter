@@ -1,0 +1,137 @@
+@use 'variables' as v;
+
+// typography
+
+@mixin logo_title {
+  font-family: v.$font_family_paragraph;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0.06em;
+}
+
+@mixin logo_subtitle {
+  font-family: v.$font_family_title;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+@mixin paragraph_l {
+  font-family: v.$font_family_title;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@mixin paragraph_s {
+  color: v.$color_dark_m;
+  font-family: v.$font_family_title;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@mixin paragraph_mobile_menu {
+  font-family: v.$font_family_title;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 51px;
+}
+
+@mixin h2 {
+  font-family: v.$font_family_paragraph;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 57px;
+}
+
+@mixin h3 {
+  font-family: v.$font_family_paragraph;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+}
+
+@mixin h3_mobile {
+  font-family: v.$font_family_paragraph;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: 0.06em;
+}
+
+@mixin h4 {
+  font-family: v.$font_family_paragraph;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
+
+@mixin h5 {
+  font-family: v.$font_family_paragraph;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+}
+
+@mixin h5_modal_window {
+  font-family: v.$font_family_paragraph;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+}
+
+// buttons
+
+@mixin button_primary {
+  display: inline-block;
+  padding: 15px 45px;
+  font-family: v.$font_family_paragraph;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border-radius: 100px;
+  color: v.$color_dark_3xl;
+  background: v.$color_primary;
+}
+
+@mixin button_secondary {
+  display: inline-block;
+  padding: 13px 43px;
+  font-family: v.$font_family_paragraph;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border-radius: 100px;
+  color: v.$color_dark_3xl;
+  border: 2px solid v.$color_primary;
+}
+
+// breakpoints
+
+@mixin media_md {
+  @media (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin media_sm {
+  @media (max-width: 767px) {
+    @content;
+  }
+}

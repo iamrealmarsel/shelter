@@ -1,0 +1,15 @@
+// base
+@use '@/styles/reset';
+@use '@/styles/base';
+
+// components
+@use '@/components/house';
+@use '@/components/pet-card';
+@use '@/components/header';
+@use '@/components/about';
+@use '@/components/our-friends';
+@use '@/components/our-friends-main';
+@use '@/components/help';
+@use '@/components/donation';
+@use '@/components/footer';
+@use '@/components/modal';

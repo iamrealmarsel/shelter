@@ -1,0 +1,78 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as m;
+
+.help {
+  padding: 80px 0 100px;
+  text-align: center;
+
+  &__title {
+    max-width: 310px;
+    margin: 0 auto 60px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 120px;
+    row-gap: 55px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__item img {
+    margin: 0 auto 30px;
+  }
+
+  &__text {
+    @include m.h4;
+    color: v.$color_dark_l;
+  }
+  @include m.media_md {
+    &__list {
+      max-width: 700px;
+      margin: 0 auto;
+      column-gap: 60px;
+    }
+
+    &__item {
+      width: 100%;
+      max-width: 170px;
+    }
+  }
+
+  @include m.media_sm {
+    padding: 42px 0;
+
+    &__title {
+      @include m.h3_mobile;
+      max-width: 240px;
+      margin-bottom: 42px;
+    }
+
+    &__list {
+      justify-content: space-between;
+      column-gap: normal;
+      row-gap: 30px;
+      max-width: 350px;
+      padding: 0 5px;
+    }
+
+    &__item {
+      max-width: 130px;
+    }
+
+    &__item img {
+      max-width: 50px;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      @include m.h5;
+    }
+  }
+}

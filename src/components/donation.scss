@@ -1,0 +1,106 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as m;
+
+.donation {
+  padding: 80px 0 100px;
+  background-color: v.$color_light_l;
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    max-width: 300px;
+  }
+
+  &__caption {
+    @include m.h5;
+    color: v.$color_dark_l;
+    max-width: 430px;
+    margin-bottom: 20px;
+  }
+
+  &__card {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 9px;
+    text-decoration: none;
+    background-color: v.$color_primary;
+    transition: 0.3s background-color;
+
+    &:hover {
+      background-color: v.$color_primary_light;
+    }
+  }
+
+  &__card img {
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  &__number {
+    @include m.h4;
+    color: v.$color_dark_l;
+  }
+
+  &__legal {
+    max-width: 380px;
+    @include m.paragraph_s;
+    font-style: italic;
+  }
+
+  @include m.media_md {
+    &__row {
+      flex-direction: column;
+    }
+
+    &__col1 img {
+      margin-right: 0;
+    }
+
+    &__col2 {
+      order: -1;
+      margin-bottom: 60px;
+    }
+  }
+
+  @include m.media_sm {
+    padding: 42px 0;
+    text-align: center;
+
+    &__title {
+      @include m.h3_mobile;
+      max-width: 220px;
+      margin: 0 auto 20px;
+      text-align: center;
+    }
+
+    &__caption {
+      letter-spacing: 0;
+      line-height: 24px;
+    }
+
+    &__number {
+      @include m.h5;
+    }
+
+    &__legal {
+      text-align: justify;
+      padding: 0 10px;
+    }
+
+    &__col1 {
+      padding: 0 20px;
+    }
+
+    &__col2 {
+      margin-bottom: 42px;
+    }
+  }
+}

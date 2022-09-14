@@ -1,0 +1,19 @@
+<% const data = JSON.parse(include('../data/pets-temp.json')) %>
+
+<section class="our-friends" id="ourFriends">
+  <div class="wrapper">
+    <h3 class="our-friends__title">Our friends who are&nbsp;looking for a house</h3>
+    <div class="our-friends__slide-list">
+      <!-- <% data.pets_all.forEach((pet) => { %>
+      <%- include('pet-card.ejs', {pet}) %>
+      <% }) %> -->
+    </div>
+    <div class="our-friends__pagination">
+      <button class="our-friends__pagination-start _disabled" disabled>&lt;&lt;</button>
+      <button class="our-friends__pagination-left _disabled" disabled>&lt;</button>
+      <span class="our-friends__pagination-page">1</span>
+      <button class="our-friends__pagination-right">&gt;</button>
+      <button class="our-friends__pagination-end">&gt;&gt;</button>
+    </div>
+  </div>
+</section>

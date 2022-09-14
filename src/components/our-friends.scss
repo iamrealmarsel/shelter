@@ -1,0 +1,115 @@
+@use '../styles/mixins' as m;
+@use '../styles/variables' as v;
+
+.our-friends {
+  padding: 80px 0 100px;
+  min-height: 1340px;
+  background-color: v.$color_light_l;
+  text-align: center;
+
+  &__title {
+    max-width: 400px;
+    margin: 0 auto 60px;
+  }
+
+  &__slider {
+    margin-bottom: 60px;
+  }
+
+  &__slide-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 40px;
+    row-gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: space-between;
+    max-width: 340px;
+    margin: 0 auto;
+
+    &-page,
+    &-start,
+    &-left,
+    &-end,
+    &-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 52px;
+      width: 52px;
+      height: 52px;
+      padding-bottom: 2px;
+      font-family: v.$font_family_paragraph;
+      font-size: 20px;
+      border-radius: 100%;
+      border: solid 1px v.$color_primary;
+      background-color: v.$color_primary;
+      transition: 0.3s background-color, 0.3s border;
+    }
+
+    &-start,
+    &-left,
+    &-end,
+    &-right {
+      &._disabled {
+        cursor: auto;
+        border-color: v.$color_dark_s;
+        background-color: transparent;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+
+    // &-start,
+    // &-left {
+    //   border-color: v.$color_dark_s;
+    //   background-color: transparent;
+    // }
+
+    &-start,
+    &-left,
+    &-end,
+    &-right {
+      cursor: pointer;
+      background-color: transparent;
+
+      &:hover {
+        background-color: v.$color_primary;
+      }
+    }
+  }
+
+  @include m.media_md {
+    padding-bottom: 76px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__slide-list {
+      max-width: 580px;
+      margin: 0 auto 40px;
+    }
+  }
+
+  @include m.media_sm {
+    padding: 42px 0;
+
+    &__title {
+      @include m.h3_mobile;
+      max-width: 300px;
+      margin-bottom: 42px;
+    }
+
+    &__slide-list {
+      max-width: 300px;
+      margin-bottom: 42px;
+    }
+  }
+}
