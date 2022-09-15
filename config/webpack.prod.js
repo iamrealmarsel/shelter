@@ -11,7 +11,7 @@ module.exports = merge(common, {
   devtool: false,
 
   output: {
-    publicPath: '/shelter/',
+    publicPath: '/shelter-cozy-house/',
     path: paths.build,
     filename: 'js/[name].[contenthash:8].bundle.js',
     clean: true,
