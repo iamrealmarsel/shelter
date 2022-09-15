@@ -1,4 +1,5 @@
 import petsData from '@/data/pets';
+import cross from '@public/assets/images/icons/cross.svg';
 
 const overlayElement = document.querySelector('#overlay');
 const bodyElement = document.body;
@@ -10,11 +11,11 @@ const makePopupHtml = (pet) => {
       <div class="modal__card">
         <div class="modal__content">
           <span class="modal__close-button">
-            <img src="/iamrealmarsel-JSFE2022Q1/shelter/images/icons/cross.svg" alt="" />
+            <img src="${cross}" alt="cross" />
           </span>
           <div class="modal__image">
             <img
-              src=${pet.img}
+              src='${require(`@public/assets/images/pets${pet.img}`)}'
               alt=${pet.name}
             />
           </div>

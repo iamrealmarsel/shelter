@@ -11,8 +11,8 @@ module.exports = merge(common, {
   devtool: false,
 
   output: {
-    publicPath: '/iamrealmarsel-JSFE2022Q1/shelter/',
-    path: paths.build + '/shelter',
+    publicPath: '/shelter/',
+    path: paths.build,
     filename: 'js/[name].[contenthash:8].bundle.js',
     clean: true,
   },
@@ -35,9 +35,7 @@ module.exports = merge(common, {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [
-                  ['postcss-preset-env', { browsers: 'last 2 versions' }],
-                ],
+                plugins: [['postcss-preset-env', { browsers: 'last 2 versions' }]],
               },
             },
           },

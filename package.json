@@ -9,8 +9,11 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist -m 'info: deploy project'"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "shelter",
+    "rsschool"
+  ],
+  "author": "Marsel",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.15.8",

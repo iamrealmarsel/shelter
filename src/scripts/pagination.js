@@ -12,7 +12,7 @@ const pagPageElement = document.querySelector('.our-friends__pagination-page');
 export const makePetCardHtml = (pet) => {
   return `
     <div class="pet-card" data-pet-id=${pet.id}>
-    <img src=${pet.img} alt=${pet.name} />
+    <img src='${require(`@public/assets/images/pets${pet.img}`)}' alt=${pet.name} />
     <div class="pet-card__text">
       <h4 class="pet-card__title">${pet.name}</h4>
       <a href="javascript: void(0);" class="pet-card__button">Learn more</a>

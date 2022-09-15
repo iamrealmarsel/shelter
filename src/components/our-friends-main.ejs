@@ -1,5 +1,3 @@
-<% const data = JSON.parse(include('../data/pets-temp.json')) %>
-
 <section class="our-friends-main" id="our-friends">
   <div class="wrapper">
     <h3 class="our-friends-main__title">Our friends who are&nbsp;looking for a house</h3>
@@ -16,13 +14,7 @@
         </svg>
       </div>
       <div class="our-friends-main__slide-wraper">
-        <div class="our-friends-main__slide-list">
-          <% data.pets_main.forEach((pet) => { %>
-          <!--  -->
-          <%- include('pet-card.ejs', {pet}) %>
-          <!--  -->
-          <% }) %>
-        </div>
+        <div class="our-friends-main__slide-list"></div>
       </div>
       <div class="our-friends-main__arrow-right">
         <svg
